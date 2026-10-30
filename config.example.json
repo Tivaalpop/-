@@ -1,0 +1,9 @@
+{
+  "bot_token": "PASTE_BOT_TOKEN_HERE",
+  "owner_id": 123456789,
+  "api_id": 0,
+  "api_hash": "",
+  "max_concurrent_downloads": 2,
+  "playlist_workers": 1,
+  "max_file_mb": 1500
+}
