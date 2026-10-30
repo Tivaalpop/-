@@ -1,6 +1,6 @@
 {
-  "bot_token": "8853263450:AAGjSNLRCF6Jwqt_vR4OP9sv2NEcfBSVD9M",
-  "owner_id": 1444139300,
+  "bot_token": "PASTE_BOT_TOKEN_HERE",
+  "owner_id": 123456789,
   "api_id": 0,
   "api_hash": "",
   "max_concurrent_downloads": 2,
