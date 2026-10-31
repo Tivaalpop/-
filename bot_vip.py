@@ -389,10 +389,24 @@ def _init_youtube_cookies() -> Path:
 
 # ---------------------------------------------------------------------------
 # Pinterest cookies — embedded directly so no external file is needed.
-# Written to a temp file once at startup; the path is stored in
-# PINTEREST_COOKIES_FILE after _init_pinterest_cookies() is called.
 # ---------------------------------------------------------------------------
 _PINTEREST_COOKIES_CONTENT = """\
+Cooookiii
+"""
+
+def _init_pinterest_cookies() -> Path:
+    """Write the embedded Pinterest cookies to a temp file and return its path."""
+    fd, path = tempfile.mkstemp(suffix=".txt", prefix="pinterest_cookies_")
+    try:
+        os.write(fd, _PINTEREST_COOKIES_CONTENT.encode())
+    finally:
+        os.close(fd)
+    return Path(path)
+
+# ---------------------------------------------------------------------------
+# Facebook cookies — embedded directly so no external file is needed.
+# ---------------------------------------------------------------------------
+_FACEBOOK_COOKIES_CONTENT = """\
 Cooookiii
 """
 
